@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
+/* colores del background:
+  rgb(25,25,49)
+  footer y botones: rgb(1,213,213)
+  cards: rgb(37,35,73)
+  about: desde rgb(254,254,253) hasta rgb(189,189,189)*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+:root{
+  --color-button:rgb(1,213,213);
+  --color-background: rgb(25,25,49);
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x:  hidden;
+  background-color: var(--color-background);
+  max-width: 1200px;
+}
+.icon{
+  font-size: 25px;
+  text-transform: uppercase;
+  line-height: 55px;
+}
+.icon--c{
+  color: var(--color-button);
+}
+.nav-bar__nav{
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  z-index: 50;
+  background-color: var(--color-background);
+  width: 100%;
+  padding: 0 30px;
+}
+.nav__container--items{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right: 200px;
+}
+.nav__list__item{
+  text-decoration: none;
+  font-weight: bolder;
+  margin-left: 60px;
+  height: 100%;
+  padding: 0 15px;
+  line-height: 60px;
+}
+.nav__list__item:hover{
+  background-color: var(--color-button);
+  color: var(--color-background);
+}
+.main{
+  display: grid;
+  grid-template-columns:1200px;
+  grid-template-rows: repeat(4,1000px);
+  align-items: center;
+}
+.button{
+  text-decoration: none;
+  background-color: var(--color-button);
+  color: #fff;
+  font-weight: bolder;
+  font-size: 15px;
+  padding: 20px;
+  width: 150px;
+  border-radius: 50px;
+  text-align: center;
+}
+.button:hover{
+  background-color: yellow;
+  font-weight: bolder;
+  color: #000;
+}
+.main__section{
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.title{
+  font-size: 45px;
+}
+.title__bar{
+  text-decoration: underline var(--color-button);
+}
+.footer .title__bar{
+  text-decoration: underline var(--color-background);
+}
+.home__img{
+  border: 10px solid var(--color-button);
+}
+.container--text{
+  height: 600px;
+  width: 35%;
+  position: relative;
+  top: 80px;  
+  border-radius: 20px;
+}
+.home__title{
+  margin-bottom: 20px;
+}
+.home__p{
+  font-size: 15px;
+  margin-bottom: 45px;
+}
+.about{
+  background: linear-gradient(rgb(253,253,253), rgb(189,189,189));
+}
+.about--text{
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.about__title, .about__p{
+  color: var(--color-background);
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.about__img{
+  height: 1020px;
+}
+.about__p{
+  font-size: 15px;
+}
+.projects{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: -80px;
+}
+.projects__title{
+  margin-left: 45%;
+}
+.container--card{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15%;
+}
+.projects__card{
+  width: 350px;
+  height: 520px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 20px;
+  margin: 50px;
+  object-fit: cover;
+  overflow: hidden;
+}
+.projects__card img{
+  width: 350px;
+}
+.projects__card__subtitle{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card__p{
+  text-align: justify;
+  padding: 20px;
+  font-size: 15px;
+}
+.container__iconos{
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+.container__iconos i{
+  font-size: 25px;
+}
+.card--button{
+  margin-left: 25%;
+  margin-bottom: 20px;
+}
+.contact{
+  flex-direction: column;
+}
+.contact__title{
+  margin-bottom: 60px;
+}
+.contact--container{
+  display: flex;
+  flex-direction: row;
+}
+.contact--container img{
+  margin-right: 250px;
+}
+.contact__container--form{
+  display: flex;
+  flex-direction: column;
+}
+.contact__item, .contact__message{
+  margin-bottom: 20px;
+  width: 400px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 5px solid var(--color-button);
+  padding: 8px;
+}
+.contact__message{
+  height: 400px;
+  resize: none;
+}
+.contact__form__button{
+  width: 300px;
+  margin: 20px 15%;
+}
+.footer{
+  background-color: var(--color-button);
+  width: 100vw;
+  height: 120px;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__subtitle{
+  font-size: 25px;
+  font-weight: normal;
+}
+.footer__icons__item{
+  font-size: 35px;
+  margin-right: 45px;
+}
