@@ -13,17 +13,19 @@
   <header class="nav-bar">
       <nav class="nav-bar__nav">
         <h5 class="icon"><span class="nav__icon icon--j">j</span><span class="nav__icon icon--c">c</span></h5>
-        
         <div class="nav__container--items">
           <a href="" class="nav__list__item">Home</a>
           <a href="" class="nav__list__item">About me</a>
           <a href="" class="nav__list__item">projects</a>
           <a href="" class="nav__list__item">Contact</a>
           <a href="" class="nav__list__item">footer</a>
+          <button class="switch" id="switch">
+            <span><i class="fas fa-sun"></i></span>
+            <span><i class="fas fa-moon"></i></span>
+          </button>
         </div>
       </nav>
   </header>
-  <main class="main">
     <section class="main__section home">
       <div class="container--text">
         <h1 class="home__title title"><span class="title__bar">I'm</span> Jhon Carter</h1>
@@ -33,7 +35,7 @@
         <a href="#" class="button home__button">Download CV</a>
       </div>
       
-      <img src="img/pexels-photo-1516680-removebg-preview.png" alt="" class="home__img">
+      <img src="img/pexels-photo-1516680-removebg-preview.png" class="home__img">
     </section>
     <section class="main__section about">
       <img src="img/about.png" alt="" class="about__img">
@@ -106,14 +108,13 @@
         <img src="img/img-opacity50.png" class="contact__img">
         <div class="contact__container--form">
           <h5 class="contact__title">Send me a menssage</h5>
-          <input type="text" placeholder="Name" class="contact__item">
-          <input type="email" placeholder="Email" class="contact__item">
-          <textarea rows="1" class="contact__message" placeholder="Escriba su mensaje"></textarea>
+          <input type="text" placeholder="Name" class="contact__item input--contact">
+          <input type="email" placeholder="Email" class="contact__item input--contact">
+          <textarea rows="1" class="contact__message input--contact" placeholder="Escriba su mensaje"></textarea>
           <a href="#" class="contact__form__button button">Send menssage</a>
         </div>
       </div>
     </section>
-  </main>
   <footer class="footer">
     <div class="container-letters">
       <h2 class="footer__title title"><span class="title__bar">Jhon</span> Carter</h2>
@@ -126,5 +127,6 @@
       <i class="fab fa-instagram footer__icons__item"></i>
     </div>
   </footer>
+  <script src="javaScript/script.js"></script>
 </body>
 </html>

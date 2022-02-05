@@ -5,21 +5,27 @@
   cards: rgb(37,35,73)
   about: desde rgb(254,254,253) hasta rgb(189,189,189)*/
 
+:root{
+  --color-button:rgb(1, 213, 213);
+  --color-background: rgb(25,25,49);
+  --color-letter: #fff;
+  --color-button-hover: rgb(255, 255, 0);
+  --color-grandient: linear-gradient(rgb(253,253,253), rgb(189,189,189));
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fff;
-}
-:root{
-  --color-button:rgb(1,213,213);
-  --color-background: rgb(25,25,49);
+  color: var(--color-letter);
 }
 body {
   font-family: 'Montserrat', sans-serif;
   overflow-x:  hidden;
-  background-color: var(--color-background);
   max-width: 1200px;
+  background-color: var(--color-background);
+}
+.sparkly{
+  background-color: var(--color-button);
 }
 .icon{
   font-size: 25px;
@@ -59,16 +65,60 @@ body {
   background-color: var(--color-button);
   color: var(--color-background);
 }
-.main{
-  display: grid;
-  grid-template-columns:1200px;
-  grid-template-rows: repeat(4,1000px);
-  align-items: center;
+.switch{
+  background-color: var(--color-button);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  border-radius: 1000px;
+  position: relative;
+  margin-left: 60px;
+}
+.switch::after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: var(--color-letter);
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.active{
+  background-color: var(--color-button-hover);
+}
+.active::after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: var(--color-letter);
+  top: 0;
+  left: unset;
+  right:0;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+button .fas{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background-color: none;
+  color: var(--color-letter);
+  text-align: center;
 }
 .button{
   text-decoration: none;
   background-color: var(--color-button);
-  color: #fff;
+  color: var(--color-letter);
   font-weight: bolder;
   font-size: 15px;
   padding: 20px;
@@ -77,9 +127,20 @@ body {
   text-align: center;
 }
 .button:hover{
-  background-color: yellow;
+  background-color: var(--color-button-hover);
   font-weight: bolder;
   color: #000;
+}
+.button--sparkly{
+  text-decoration: none;
+  background-color: var(--color-background);
+  color: var(--color-letter);
+  font-weight: bolder;
+  font-size: 15px;
+  padding: 20px;
+  width: 150px;
+  border-radius: 50px;
+  text-align: center;
 }
 .main__section{
   display: flex;
@@ -87,6 +148,9 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 120px 0;
+  min-width: 1200px;
 }
 .title{
   font-size: 45px;
@@ -113,9 +177,14 @@ body {
 .home__p{
   font-size: 15px;
   margin-bottom: 45px;
+  padding-right: 40px;
+}
+.sparkly--img{
+  border: 10px solid var(--color-background);;
 }
 .about{
-  background: linear-gradient(rgb(253,253,253), rgb(189,189,189));
+  background: var(--color-grandient);
+  width: 100vw;
 }
 .about--text{
   display: flex;
@@ -130,14 +199,12 @@ body {
   margin-bottom: 40px;
 }
 .about__img{
-  height: 1020px;
+  height: 50%;
 }
 .about__p{
   font-size: 15px;
 }
 .projects{
-  display: flex;
-  justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   margin-bottom: -80px;
@@ -148,7 +215,6 @@ body {
 .container--card{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-left: 15%;
@@ -221,6 +287,12 @@ body {
   width: 300px;
   margin: 20px 15%;
 }
+.sparkly--input{
+  border: none;
+  outline: none;
+  border-bottom: 5px solid var(--color-background);
+  padding: 8px;
+}
 .footer{
   background-color: var(--color-button);
   width: 100vw;
@@ -238,4 +310,7 @@ body {
 .footer__icons__item{
   font-size: 35px;
   margin-right: 45px;
+}
+.footer--sparkly{
+  background-color: var(--color-background);
 }
