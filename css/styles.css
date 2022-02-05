@@ -158,8 +158,14 @@ button .fas{
 .title__bar{
   text-decoration: underline var(--color-button);
 }
+.title--sparkly{
+  text-decoration: underline var(--color-background);
+}
 .footer .title__bar{
   text-decoration: underline var(--color-background);
+}
+.footer .title--sparkly{
+  text-decoration: underline var(--color-button);
 }
 .home__img{
   border: 10px solid var(--color-button);
@@ -210,19 +216,21 @@ button .fas{
   margin-bottom: -80px;
 }
 .projects__title{
-  margin-left: 45%;
+  margin: auto;
 }
 .container--card{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-left: 15%;
+  margin: 0 auto;
 }
 .projects__card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 350px;
   height: 520px;
-  box-sizing: border-box;
   border: 1px solid #000;
   border-radius: 20px;
   margin: 50px;
@@ -230,7 +238,8 @@ button .fas{
   overflow: hidden;
 }
 .projects__card img{
-  width: 350px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 .projects__card__subtitle{
   text-align: center;
@@ -244,31 +253,40 @@ button .fas{
 .container__iconos{
   margin-bottom: 40px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
 .container__iconos i{
   font-size: 25px;
+  margin: 0 45px;
 }
 .card--button{
-  margin-left: 25%;
-  margin-bottom: 20px;
+  margin-top: -15px;
+  width: 50%;
 }
+
 .contact{
   flex-direction: column;
 }
 .contact__title{
-  margin-bottom: 60px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.contact__subtitle{
+  margin-bottom: 20px;
 }
 .contact--container{
   display: flex;
   flex-direction: row;
 }
 .contact--container img{
-  margin-right: 250px;
+  margin: auto;
 }
 .contact__container--form{
   display: flex;
   flex-direction: column;
+  margin:auto;
 }
 .contact__item, .contact__message{
   margin-bottom: 20px;
@@ -313,4 +331,47 @@ button .fas{
 }
 .footer--sparkly{
   background-color: var(--color-background);
+}
+@media screen and (max-width: 1350px) {
+  .about{
+    width: 1350px;
+  }
+  .footer{
+    width: 1350px;
+  }
+}
+@media screen and (max-width: 800px){
+  .main__section{
+    flex-direction: column;
+  }
+  .home{
+    flex-direction: column-reverse;
+  }
+  .home__p{
+    padding: 0;
+  }
+  .home__img, .container--text{
+    margin: auto;
+    margin-bottom: 0;
+  }
+  .about__img{
+    margin-top: 20px
+  }
+  .title{
+    font-size: 65px;
+  }
+  .about__p, .home__p{
+    font-size: 25px;
+  }
+  .container--card{
+    flex-direction: column;
+  }
+  .projects__card{
+    width: 50%;
+    height: 850px;
+  }
+  .card__p{
+    font-size: 25px;
+    margin: 15px;
+  }
 }
