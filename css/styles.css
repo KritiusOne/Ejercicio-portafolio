@@ -48,10 +48,11 @@ body {
   padding: 0 30px;
 }
 .nav__container--items{
+  text-transform: capitalize;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding-right: 200px;
+  padding-right: 8%;
 }
 .nav__list__item{
   text-decoration: none;
@@ -151,6 +152,7 @@ button .fas{
   flex-wrap: nowrap;
   margin: 120px 0;
   min-width: 1200px;
+  object-fit: contain;
 }
 .title{
   font-size: 45px;
@@ -373,5 +375,13 @@ button .fas{
   .card__p{
     font-size: 25px;
     margin: 15px;
+  }
+}
+@media screen and (max-width: 500px){
+  .contact--container{
+    flex-direction: column;
+  }
+  .contact--container img{
+    margin-bottom: 150px;
   }
 }

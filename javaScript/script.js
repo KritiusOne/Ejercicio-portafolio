@@ -5,6 +5,7 @@ const botones = document.querySelectorAll(".button");
 const footer = document.querySelector(".footer");
 const homeImg = document.querySelector(".home__img");
 const input = document.querySelectorAll(".input--contact");
+const titleBar = document.querySelectorAll(".title__bar");
 
 
 button.addEventListener('click', (e)=>{
@@ -18,6 +19,9 @@ button.addEventListener('click', (e)=>{
         homeImg.classList.toggle("sparkly--img");
         input.forEach((e)=>{
             e.classList.toggle("sparkly--input");
+        })
+        titleBar.forEach((e)=>{
+            e.classList.toggle("title--sparkly");
         })
     }
 })

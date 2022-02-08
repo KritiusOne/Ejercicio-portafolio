@@ -106,13 +106,13 @@
       <h2 class="contact__title title"><span class="title__bar">keep in</span> touch</h2>
       <div class="contact--container">
         <img src="img/img-opacity50.png" class="contact__img">
-        <div class="contact__container--form">
-          <h5 class="contact__title">Send me a menssage</h5>
-          <input type="text" placeholder="Name" class="contact__item input--contact">
-          <input type="email" placeholder="Email" class="contact__item input--contact">
+        <form class="contact__container--form">
+          <h5 class="contact__subtitle">Send me a menssage</h5>
+          <input type="text" placeholder="Name" class="contact__item input--contact name">
+          <input type="email" placeholder="Email" class="contact__item input--contact email">
           <textarea rows="1" class="contact__message input--contact" placeholder="Escriba su mensaje"></textarea>
-          <a href="#" class="contact__form__button button">Send menssage</a>
-        </div>
+          <input type="submit" class="contact__form__button button" placeholder="Send Message" value="enviar"></input>
+        </form>
       </div>
     </section>
   <footer class="footer">
@@ -127,6 +127,7 @@
       <i class="fab fa-instagram footer__icons__item"></i>
     </div>
   </footer>
+  <script src="/portfolio-tutorial/javaScript/correo.js"></script>
   <script src="javaScript/script.js"></script>
 </body>
 </html>
